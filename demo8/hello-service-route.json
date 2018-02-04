@@ -1,0 +1,20 @@
+{
+  "kind": "Route",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "hello-openshift-route",
+    "labels": {
+      "name": "hello-openshift"
+    }
+  },
+  "spec": {
+    "host": "hello-service-demo.apps.example.com",
+    "port": {
+       "targetPort": 8080
+    },
+    "to": {
+      "kind": "Service",
+      "name": "hello-service"
+     }
+  }
+}
